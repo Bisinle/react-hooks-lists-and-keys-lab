@@ -2,14 +2,14 @@ import React from "react";
 import ProjectItem from "./ProjectItem";
 
 function ProjectList({ projects }) {
-  const user = projects.map((user) => {
+  const project = projects.map((project) => {
     return (
-      <li key={user.id}>
+      <li key={project.id}>
         {" "}
         <ProjectItem
-          name={user.name}
-          about={user.about}
-          technologies={user.technologies}
+          name={project.name}
+          about={project.about}
+          technologies={project.technologies}
         />
       </li>
     );
@@ -18,7 +18,7 @@ function ProjectList({ projects }) {
     <div id="projects">
       <h2>My Projects</h2>
 
-      <div id="project-list">{user}</div>
+      <div id="project-list">{project}</div>
     </div>
   );
 }
